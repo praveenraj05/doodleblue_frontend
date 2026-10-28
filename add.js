@@ -49,3 +49,50 @@ console.log(c)  */
 /* console.log("1"===1)//false */
 
 /* console.log("1"===String(1))//true */
+//map method
+
+// let name =["thani","kumar","siva","raja"]
+// const newname=name.map((name,index)=>{
+//     return `${name} = ${index}`
+// })
+// console.log(newname);
+// console.log(name)
+
+//filter method
+
+// let a =[1,2,3,4,5]
+// let b = a.filter((a)=>a%2==0)
+// console.log(b)
+// console.log(a)
+
+//find method
+
+// const user =[
+//     {id:1,name:"jeeva",age:18},
+//     {id:2,name:"kumar",age:20},
+// ]
+// const result = user.find((user) => user.id==1)
+// console.log(result.age)
+// console.log(user)
+
+//findindex method
+
+// const user =[
+//     {id:1,name:"jeeva",age:18},
+//     {id:2,name:"kumar",age:20}, 
+//     {id:3,name:"siva",age:22},
+//     {id:4,name:"raja",age:24},
+//     {id:5,name:"thani",age:26},
+//     {id:6,name:"karthi",age:28},
+//     {id:7,name:"priya",age:30},
+//     {id:8,name:"sudha",age:32},
+//     {id:9,name:"praveen",age:34},
+//     {id:10,name:"deva",age:36}
+// ]
+// const result = user.findIndex((user) => user.id==7)
+// console.log(result)
+// const findIndexInArray = user.findIndex((user) => user.id==11)
+// console.log(findIndexInArray)
+
+//reduce method
+

@@ -1,53 +1,286 @@
-<html>
-    <head>
-        <title>My Web Page</title>
-    </head>
-    <body>
-        <center>
-        <h1><font color="white">Praveen Raj M </font></h1>
-        <h2><font color="white">Software Engineer</font></h2>
-        </center>
-        <img src="light.jpg" alt="Profile Picture" width="150" height="150">
-        <p><b>Contact:</b> <div>+91 9345755899</div><div><a href="mailto:praveen323747@gmail.com">praveen323747@gmail.com</a></div><div>43 Othavadai Street,Madhiravedu, Thiruverkadu,Chennai 60007</div></p>
-        <p><b>Career Objective:</b> <div>Motivated Computer Science student with strong skills in Python, Java, SQL, and web technologies.<br>Interested in software development, problem-solving, and emerging technologies, with a focus on <br>building practical and efficient solutions.Quick learner with strong teamwork, communication, and analytical skills.</div></p>
-        <p><b>Education:</b> <ul>
-            <li>Bachelor of Technology in Information Technology from Anna University, 2027</li>
-            <li>HSC from Pioneer Matriculation  Higher Secondary School, 2023</li>
-        </ul></p>
-        <p><b>Skills:</b>
-            <ul>
-                <li>Programming in Python, Java, and C++</li>
-                <li>Web Development with HTML, CSS, and JavaScript</li>
-                <li>Database Management with SQL</li>
-            </ul>
-        </p>
-        <p><b>Projects:</b><div><b>OmniFlow:</b></div></b>
-        <ul>
-            <li>Developed OmniFlow, an intelligent workflow management system to automate and organize tasks efficiently. </li>
-            <li>Designed features for task management, workflow automation, and productivity improvement.</li>
-        </ul>
-        </p>
-        <p><b>Declaration:</b> <div>I hereby declare that the information provided above is true and correct to the best of my knowledge.</div><p>
-        
-    </body>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Praveen Raj M | Resume</title>
+
     <style>
+        * {
+            box-sizing: border-box;
+        }
+
         body {
-            background-color: #2d9bdb9a;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 32px 20px;
+            background: #f5f5f5;
+            color: #292929;
             font-family: Arial, sans-serif;
-            margin: 20px;
+            line-height: 1.6;
         }
+
+        header {
+    position: relative;
+    padding-bottom: 24px;
+    padding-right: 130px;
+    border-bottom: 3px solid #c62828;
+}
+
+.profile-pic {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 110px;
+    height: 110px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+        header {
+            padding-bottom: 24px;
+            border-bottom: 3px solid #c62828;
+        }
+
         h1, h2 {
-            margin: 10px 0;
+            color: #b71c1c;
         }
+
+        h1 {
+            margin: 0;
+            font-size: clamp(2rem, 5vw, 2.8rem);
+            line-height: 1.2;
+        }
+
+        .intro {
+            margin: 10px 0;
+            color: #c62828;
+        }
+
+        .header-desc {
+            margin: 8px 0;
+            color: #555;
+        }
+
+        .contact {
+            margin-top: 14px;
+            font-size: 13px;
+        }
+
+        section {
+            padding: 20px 0;
+            border-bottom: 1px solid #ddd;
+        }
+
+        h2 {
+            margin: 0 0 10px;
+            font-size: 1.3rem;
+            border-bottom: 1px solid #e4b5b5;
+            padding-bottom: 5px;
+        }
+
         p {
-            margin: 10px 0;
-            color: red;
-            padding: 5px;
-        
+            margin: 6px 0;
         }
+
         ul {
-            list-style-type: disc;
-            margin-left: 20px;
+            margin: 0;
+            padding-left: 22px;
         }
-</style>
+
+        li {
+            padding: 3px 0;
+        }
+
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .skills span {
+            border: 1px solid #c62828;
+            color: #333;
+            padding: 5px 12px;
+            border-radius: 4px;
+            font-size: 13px;
+        }
+
+        .project {
+            margin-bottom: 16px;
+        }
+
+        .project strong {
+            color: #a51d1d;
+        }
+
+        a {
+            color: #b71c1c;
+            text-decoration: none;
+            overflow-wrap: anywhere;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .download {
+            text-align: center;
+            margin-top: 25px;
+        }
+
+        button {
+            background: #c62828;
+            color: white;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+
+        button:hover {
+            background: #941b1b;
+        }
+
+        @media (max-width: 600px) {
+            body {
+                padding: 20px 16px;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+        }
+
+        @page {
+            size: A4;
+            margin: 12mm;
+        }
+
+        @media print {
+            body {
+                padding: 0;
+                background: white;
+            }
+
+            .download {
+                display: none;
+            }
+
+            section, .project {
+                break-inside: avoid;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>PRAVEEN RAJ M</h1>
+        <h3 class="intro">Computer Science Student</h3>
+        <p class="header-desc">
+            Interested in Software Development and Web Technologies
+        </p>
+        <p class="header-desc">
+            Motivated student passionate about developing useful applications,
+            learning new technologies and solving real-world problems.
+        </p>
+
+        <img src="image.jpg" alt="Praveen Raj" class="profile-pic">
+
+        <div class="contact">
+            <p>Email: <a href="mailto:praveen323747@gmail.com">praveen323747@gmail.com</a></p>
+            <p>Phone: +91 93457558999</p>
+            <p>Location: Chennai, India</p>
+            
+        </div>
+    </header>
+
+    <main>
+        <section>
+            <h2>Profile</h2>
+            <p>
+                Enthusiastic Computer Science student with an interest in
+                software development, web technologies and problem-solving.
+                Looking forward to applying technical skills in real-world
+                projects and contributing to a professional team.
+            </p>
+        </section>
+
+        <section>
+            <h2>Education</h2>
+            <p><strong>Bachelor's Degree in Computer Science</strong></p>
+            <p>SA Engineering College, Chennai</p>
+            <p>Academic Period: 2023 – 2027</p>
+            <p>CGPA: Add your current CGPA</p>
+        </section>
+
+        <section>
+            <h2>Technical Skills</h2>
+            <div class="skills">
+                <span>Python</span>
+                <span>Java</span>
+                <span>C</span>
+                <span>HTML</span>
+                <span>CSS</span>
+            </div>
+        </section>
+
+        <section>
+            <h2>Projects</h2>
+
+            <div class="project">
+                <p><strong>OmniFlow – AI Workflow Automation Platform</strong></p>
+                <p>
+                    Developed a workflow automation platform that connects
+                    applications and automates repetitive tasks using triggers
+                    and actions.
+                </p>
+                <p><b>Technologies:</b> Python, FastAPI, React, MongoDB, APIs</p>
+            </div>
+
+            <div class="project">
+                <p><strong>LuxBus – Premium Bus Booking Website</strong></p>
+                <p>
+                    Designed a responsive bus booking website with a modern
+                    interface and interactive user experience.
+                </p>
+                <p><b>Technologies:</b> HTML, CSS, JavaScript</p>
+            </div>
+        </section>
+
+        <section>
+            <h2>Certifications</h2>
+            <ul>
+                <li>UI/UX Design</li>
+                <li>Web Development</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Personal Strengths</h2>
+            <ul>
+                <li>Quick Learning and Adaptability</li>
+                <li>Teamwork and Collaboration</li>
+                <li>Problem-Solving Skills</li>
+                <li>Willingness to Learn New Technologies</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Contact</h2>
+            <p>
+                Email:
+                <a href="mailto:praveen323747@gmail.com">praveen323747@gmail.com</a>
+            </p>
+            <p>Phone: +91 93457558999</p>
+        </section>
+
+       
+        
+    </main>
+</body>
 </html>
+
