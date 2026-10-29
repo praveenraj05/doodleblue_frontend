@@ -2,8 +2,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <title>Praveen Raj M | Resume</title>
 
     <style>
@@ -13,7 +12,7 @@
 
         body {
             max-width: 900px;
-            margin: 0 auto;
+            margin: auto;
             padding: 32px 20px;
             background: #f5f5f5;
             color: #292929;
@@ -22,24 +21,8 @@
         }
 
         header {
-    position: relative;
-    padding-bottom: 24px;
-    padding-right: 130px;
-    border-bottom: 3px solid #c62828;
-}
-
-.profile-pic {
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 110px;
-    height: 110px;
-    object-fit: cover;
-    border-radius: 50%;
-}
-
-        header {
-            padding-bottom: 24px;
+            position: relative;
+            padding: 0 130px 24px 0;
             border-bottom: 3px solid #c62828;
         }
 
@@ -54,13 +37,23 @@
         }
 
         .intro {
-            margin: 10px 0;
             color: #c62828;
+            margin: 10px 0;
         }
 
         .header-desc {
-            margin: 8px 0;
             color: #555;
+            margin: 8px 0;
+        }
+
+        .profile-pic {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 110px;
+            height: 110px;
+            object-fit: cover;
+            border-radius: 50%;
         }
 
         .contact {
@@ -74,8 +67,8 @@
         }
 
         h2 {
-            margin: 0 0 10px;
             font-size: 1.3rem;
+            margin: 0 0 10px;
             border-bottom: 1px solid #e4b5b5;
             padding-bottom: 5px;
         }
@@ -85,7 +78,6 @@
         }
 
         ul {
-            margin: 0;
             padding-left: 22px;
         }
 
@@ -101,7 +93,6 @@
 
         .skills span {
             border: 1px solid #c62828;
-            color: #333;
             padding: 5px 12px;
             border-radius: 4px;
             font-size: 13px;
@@ -121,27 +112,14 @@
             overflow-wrap: anywhere;
         }
 
-        a:hover {
-            text-decoration: underline;
-        }
-
-        .download {
-            text-align: center;
-            margin-top: 25px;
-        }
-
         button {
             background: #c62828;
             color: white;
             padding: 12px 24px;
-            border: none;
+            border: 0;
             border-radius: 4px;
             cursor: pointer;
-            font-size: 14px;
-        }
-
-        button:hover {
-            background: #941b1b;
+            margin-top: 20px;
         }
 
         @media (max-width: 600px) {
@@ -149,8 +127,15 @@
                 padding: 20px 16px;
             }
 
-            h1 {
-                font-size: 2rem;
+            header {
+                padding-right: 0;
+            }
+
+            .profile-pic {
+                position: static;
+                width: 100px;
+                height: 100px;
+                margin-bottom: 12px;
             }
         }
 
@@ -165,11 +150,12 @@
                 background: white;
             }
 
-            .download {
+            button {
                 display: none;
             }
 
-            section, .project {
+            section,
+            .project {
                 break-inside: avoid;
             }
         }
@@ -177,110 +163,221 @@
 </head>
 
 <body>
-    <header>
-        <h1>PRAVEEN RAJ M</h1>
-        <h3 class="intro">Computer Science Student</h3>
-        <p class="header-desc">
-            Interested in Software Development and Web Technologies
-        </p>
-        <p class="header-desc">
-            Motivated student passionate about developing useful applications,
-            learning new technologies and solving real-world problems.
-        </p>
 
-        <img src="image.jpg" alt="Praveen Raj" class="profile-pic">
+    <header>
+        <img
+            id="profileImage"
+            class="profile-pic"
+            src="image.jpg"
+            alt="Profile Photo"
+        >
+
+        <h1 id="name"></h1>
+
+        <h3 class="intro" id="role"></h3>
+
+        <p class="header-desc" id="tagline"></p>
+
+        <p class="header-desc" id="introText"></p>
 
         <div class="contact">
-            <p>Email: <a href="mailto:praveen323747@gmail.com">praveen323747@gmail.com</a></p>
-            <p>Phone: +91 93457558999</p>
-            <p>Location: Chennai, India</p>
-            
+            <p>
+                Email:
+                <a id="emailLink"></a>
+            </p>
+
+            <p>
+                Phone:
+                <span id="phone"></span>
+            </p>
+
+            <p>
+                Location:
+                <span id="location"></span>
+            </p>
         </div>
     </header>
 
     <main>
+
         <section>
             <h2>Profile</h2>
-            <p>
-                Enthusiastic Computer Science student with an interest in
-                software development, web technologies and problem-solving.
-                Looking forward to applying technical skills in real-world
-                projects and contributing to a professional team.
-            </p>
+            <p id="profile"></p>
         </section>
 
         <section>
             <h2>Education</h2>
-            <p><strong>Bachelor's Degree in Computer Science</strong></p>
-            <p>SA Engineering College, Chennai</p>
-            <p>Academic Period: 2023 – 2027</p>
-            <p>CGPA: Add your current CGPA</p>
+            <div id="education"></div>
         </section>
 
         <section>
             <h2>Technical Skills</h2>
-            <div class="skills">
-                <span>Python</span>
-                <span>Java</span>
-                <span>C</span>
-                <span>HTML</span>
-                <span>CSS</span>
-            </div>
+            <div class="skills" id="skills"></div>
         </section>
 
         <section>
             <h2>Projects</h2>
-
-            <div class="project">
-                <p><strong>OmniFlow – AI Workflow Automation Platform</strong></p>
-                <p>
-                    Developed a workflow automation platform that connects
-                    applications and automates repetitive tasks using triggers
-                    and actions.
-                </p>
-                <p><b>Technologies:</b> Python, FastAPI, React, MongoDB, APIs</p>
-            </div>
-
-            <div class="project">
-                <p><strong>LuxBus – Premium Bus Booking Website</strong></p>
-                <p>
-                    Designed a responsive bus booking website with a modern
-                    interface and interactive user experience.
-                </p>
-                <p><b>Technologies:</b> HTML, CSS, JavaScript</p>
-            </div>
+            <div id="projects"></div>
         </section>
 
         <section>
             <h2>Certifications</h2>
-            <ul>
-                <li>UI/UX Design</li>
-                <li>Web Development</li>
-            </ul>
+            <ul id="certifications"></ul>
         </section>
 
         <section>
             <h2>Personal Strengths</h2>
-            <ul>
-                <li>Quick Learning and Adaptability</li>
-                <li>Teamwork and Collaboration</li>
-                <li>Problem-Solving Skills</li>
-                <li>Willingness to Learn New Technologies</li>
-            </ul>
+            <ul id="strengths"></ul>
         </section>
 
         <section>
             <h2>Contact</h2>
+
             <p>
                 Email:
-                <a href="mailto:praveen323747@gmail.com">praveen323747@gmail.com</a>
+                <a id="contactEmail"></a>
             </p>
-            <p>Phone: +91 93457558999</p>
+
+            <p>
+                Phone:
+                <span id="contactPhone"></span>
+            </p>
         </section>
 
-       
-        
     </main>
+
+    <script>
+        
+        document.getElementById("name").textContent =
+            "PRAVEEN RAJ M";
+
+        document.getElementById("role").textContent =
+            "Computer Science Student";
+
+        document.getElementById("tagline").textContent =
+            "Interested in Software Development and Web Technologies";
+
+        document.getElementById("introText").textContent =
+            "Motivated student passionate about developing useful applications, learning new technologies and solving real-world problems.";
+
+        document.getElementById("profileImage").src =
+            "image.jpg";
+
+        
+        document.getElementById("profile").textContent =
+            "Enthusiastic Computer Science student interested in software development, web technologies and problem-solving.";
+
+        
+        document.getElementById("emailLink").textContent =
+            "praveen323747@gmail.com";
+
+        document.getElementById("emailLink").href =
+            "mailto:praveen323747@gmail.com";
+
+        document.getElementById("phone").textContent =
+            "+91 93457558999";
+
+        document.getElementById("location").textContent =
+            "Chennai, India";
+
+        document.getElementById("contactEmail").textContent =
+            "praveen323747@gmail.com";
+
+        document.getElementById("contactEmail").href =
+            "mailto:praveen323747@gmail.com";
+
+        document.getElementById("contactPhone").textContent =
+            "+91 93457558999";
+
+        
+        document.getElementById("education").innerHTML = `
+            <p><b>Bachelor's Degree in Computer Science</b></p>
+            <p>SA Engineering College, Chennai</p>
+            <p>2023–2027</p>
+            <p>CGPA: 7.90</p>
+        `;
+
+        
+        const skills = [
+            "Python",
+            "Java",
+            "C",
+            "HTML",
+            "CSS"
+        ];
+
+        skills.forEach(function(skill) {
+            let span = document.createElement("span");
+
+            span.textContent = skill;
+
+            document.getElementById("skills").appendChild(span);
+        });
+
+        
+        const projects = [
+            [
+                "OmniFlow – AI Workflow Automation Platform",
+                "Automates repetitive tasks by connecting applications through triggers and actions.",
+                "Python, FastAPI, React, MongoDB, APIs"
+            ],
+            [
+                "LuxBus – Premium Bus Booking Website",
+                "Responsive bus booking website with a modern user interface.",
+                "HTML, CSS, JavaScript"
+            ]
+        ];
+
+        projects.forEach(function(project) {
+            let div = document.createElement("div");
+            div.className = "project";
+
+            let title = document.createElement("strong");
+            title.textContent = project[0];
+
+            let description = document.createElement("p");
+            description.textContent = project[1];
+
+            let technology = document.createElement("p");
+            technology.textContent = "Technologies: " + project[2];
+
+            div.appendChild(title);
+            div.appendChild(description);
+            div.appendChild(technology);
+
+            document.getElementById("projects").appendChild(div);
+        });
+
+        
+        const certifications = [
+            "UI/UX Design",
+            "Web Development"
+        ];
+
+        certifications.forEach(function(certificate) {
+            let li = document.createElement("li");
+
+            li.textContent = certificate;
+
+            document.getElementById("certifications").appendChild(li);
+        });
+
+        
+        const strengths = [
+            "Quick Learning and Adaptability",
+            "Teamwork and Collaboration",
+            "Problem-Solving Skills",
+            "Willingness to Learn"
+        ];
+
+        strengths.forEach(function(strength) {
+            let li = document.createElement("li");
+
+            li.textContent = strength;
+
+            document.getElementById("strengths").appendChild(li);
+        });
+    </script>
+
 </body>
 </html>
-
